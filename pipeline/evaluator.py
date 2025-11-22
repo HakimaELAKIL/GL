@@ -1,5 +1,6 @@
 from utils.metrics import Metrics
 import numpy as np
+import pandas as pd
 
 class Evaluator:
     def __init__(self, model):
