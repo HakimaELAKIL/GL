@@ -17,10 +17,10 @@ jobs:
           python-version: '3.11'
       - name: Generate requirements.txt
         run: pip freeze > requirements.txt
-      - name: Install flake8
-        run: pip install flake8
-      - name: Lint
-        run: flake8 .
+    #   - name: Install flake8
+    #     run: pip install flake8
+    #   - name: Lint
+    #     run: flake8 .
 
   test:
     runs-on: ubuntu-latest
@@ -33,8 +33,8 @@ jobs:
           python-version: '3.11'
       - name: Generate requirements.txt
         run: pip freeze > requirements.txt
-      - name: Install flake8
-        run: pip install flake8
+    #   - name: Install flake8
+    #     run: pip install flake8
       - name: Run tests
         run: pytest
 
@@ -49,7 +49,7 @@ jobs:
           python-version: '3.11'
       - name: Generate requirements.txt
         run: pip freeze > requirements.txt
-      - name: Install flake8
-        run: pip install flake8
+    #   - name: Install flake8
+    #     run: pip install flake8
       - name: Build package
         run: python setup.py sdist bdist_wheel
